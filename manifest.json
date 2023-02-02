@@ -1,0 +1,34 @@
+{
+
+  "manifest_version": 2,
+  "name": "PokerCheat",
+  "version": "1.0",
+
+  "description": "Punten spieken",
+  "homepage_url": "https://github.com/timonvdvelde/pokercheat",
+
+  "icons": {
+    "48": "icons/scrum-poker.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/scrum-poker.png",
+    "default_title": "PokerCheat"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.scrumpoker-online.org/*"],
+      "js": ["pokercheat.js"]
+    }
+  ],
+
+  "background": {
+      "scripts": ["background.js"]
+  }
+
+}
